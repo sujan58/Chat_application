@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Clone - Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="server-header">Discord Clone</div>
+            <div class="channel-list">
+                <div class="channel active" data-channel="general"># general</div>
+                <div class="channel" data-channel="off-topic"># off-topic</div>
+                <div class="channel" data-channel="help"># help</div>
+            </div>
+            <div class="user-panel">
+                <div class="user-avatar"></div>
+                <div class="user-info" id="current-user">User</div>
+                <button id="logout-btn"
+                    style="margin-left: auto; background: none; border: none; color: #ed4245; cursor: pointer;">Logout</button>
+            </div>
+            <div class="online-users-section"
+                style="padding: 10px; color: #8e9297; font-size: 12px; height: 30%; overflow-y: auto;">
+                <div style="text-transform: uppercase; font-weight: bold; margin-bottom: 5px;">Online Users</div>
+                <ul id="online-users-list" style="list-style: none; padding: 0;">
+                    <!-- Online users will be added here -->
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Chat Area -->
+        <main class="chat-area">
+            <div class="chat-header">
+                <span style="color: #72767d; margin-right: 5px;">#</span> general
+            </div>
+            <div class="messages" id="message-container">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <form id="message-form">
+                        <input type="text" id="message-input" placeholder="Message #general" autocomplete="off">
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Clone - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-box">
+            <h2 id="form-title">Welcome Back!</h2>
+            <p id="form-subtitle">We're so excited to see you again!</p>
+            
+            <form id="auth-form">
+                <div class="input-group">
+                    <label for="username">USERNAME</label>
+                    <input type="text" id="username" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" required>
+                </div>
+
+                <div class="input-group" id="email-group" style="display: none;">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id="email">
+                </div>
+
+                <button type="submit" id="submit-btn" class="btn-primary">Log In</button>
+            </form>
+
+            <div class="auth-footer">
+                <span id="toggle-text">Need an account?</span>
+                <a href="#" id="toggle-auth">Register</a>
+            </div>
+            <div id="error-message" class="error"></div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
